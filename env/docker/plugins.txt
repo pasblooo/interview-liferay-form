@@ -10,6 +10,7 @@ github-branch-source:latest
 gradle:latest
 ldap:latest
 mailer:latest
+maven:latest
 matrix-auth:latest
 pam-auth:latest
 pipeline-github-lib:latest
