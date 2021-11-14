@@ -15,3 +15,20 @@ Feature: Launch Liferay form
       | Firefox          |
       | InternetExplorer |
       | Opera            |
+
+
+  Scenario Outline: Launch the liferay form application with different resolutions
+    Given Open "Chrome" browser
+    When Set browser window size to "<width>" width by "<height>" height
+    And Load liferay form aplication
+    Then The form has been loaded correctly
+
+    Examples: Load with <width> x <heigth> size
+      | width | height |
+      | 1920  | 1080   |
+      | 1280  | 800    |
+      | 1024  | 768    |
+      | 640   | 360    |
+      | 2560  | 1440   |
+      | 962   | 601    |
+      | 896   | 414    |
