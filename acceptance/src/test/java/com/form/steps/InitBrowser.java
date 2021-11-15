@@ -8,8 +8,6 @@ import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import io.cucumber.java.en.Given;
-import com.form.steps.ManageBrowser;
 
 public class InitBrowser {
 
