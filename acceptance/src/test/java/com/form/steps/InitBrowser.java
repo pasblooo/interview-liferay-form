@@ -9,6 +9,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import io.cucumber.java.en.Given;
+import com.form.steps.ManageBrowser;
 
 public class InitBrowser {
 
@@ -23,7 +24,6 @@ public class InitBrowser {
         try {
             driver = setBrowser(browser);
             driver.manage().window().maximize();
-            driver.quit();
         } catch (Exception e) {
             System.out.println("Something went wrong.\n");
         }
