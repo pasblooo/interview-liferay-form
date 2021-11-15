@@ -2,7 +2,7 @@ package cucumber;
 
 import java.util.HashMap;
 import java.util.Map;
-import package.enums.Context;
+import enums.Context;
 
 public class ScenarioContext {
     private  Map<String, Object> scenarioContext;
