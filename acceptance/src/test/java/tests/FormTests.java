@@ -52,14 +52,23 @@ public class FormTests {
 
     @Test
     public void fillFormTest() {
+
         openFormTest();
 
         String[] user = config.get("user_correct").toString().split("#");
         int index = 0;
 
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+
         for (WebElement element : inputsElements) {
+            element.clear();
             element.sendKeys(user[index++]);
+            driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         }
+
+        ManageBrowser.submitForm(driver, config);
+        ManageBrowser.checkInformationSent(driver, config);
+
     }
 
     @After
