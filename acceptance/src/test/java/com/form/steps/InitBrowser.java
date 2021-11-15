@@ -8,27 +8,24 @@ import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import io.cucumber.java.en.*;
 import io.cucumber.java.en.Given;
 
-import java.io.IOException;
-
-public class BrowserLauncher {
+public class InitBrowser {
 
     public static void main(String[] args) {
-        openBrowser("chrome");
+        initBrowser("chrome");
     }
 
     @Given("Open {String} browser")
-    public static void openBrowser(String browser) {
+    public static void initBrowser(String browser) {
         WebDriver driver;
-        driver = setBrowser(browser);
 
         try {
+            driver = setBrowser(browser);
             driver.manage().window().maximize();
             driver.quit();
         } catch (Exception e) {
-            System.out.println("Something went wrong.");
+            System.out.println("Something went wrong.\n");
         }
 
     }
