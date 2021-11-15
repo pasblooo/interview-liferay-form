@@ -8,21 +8,7 @@ import org.openqa.selenium.WebDriver;
 
 public class ManageBrowser {
 
-    Properties config = new Properties();
-    InputStream configInput = null;
-
-    public void loadConfig(){
-        try{
-            configInput = new FileInputStream("config.properties");
-            config.load(configInput);
-        } catch(Exception e){
-            System.out.println("Error loading configuration\n");
-        }
-    }
-
-    @When("Load liferay form application")
-    public void loadLiferayFormApplication(WebDriver webDriver) {
-        loadConfig();
-        webDriver.get(config.getProperty("liferay_form_url"));
+    public static void loadURL(WebDriver webDriver, String url) {
+        webDriver.get(url);
     }
 }
