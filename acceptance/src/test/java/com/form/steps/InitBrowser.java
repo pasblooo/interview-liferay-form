@@ -13,23 +13,6 @@ import com.form.steps.ManageBrowser;
 
 public class InitBrowser {
 
-    public static void main(String[] args) {
-        initBrowser("chrome");
-    }
-
-    @Given("Open {String} browser")
-    public static void initBrowser(String browser) {
-        WebDriver driver;
-
-        try {
-            driver = setBrowser(browser);
-            driver.manage().window().maximize();
-        } catch (Exception e) {
-            System.out.println("Something went wrong.\n");
-        }
-
-    }
-
     public static WebDriver setBrowser(String browser) {
 
         if (browser == "firefox") {
