@@ -8,13 +8,13 @@ Feature: Launch Liferay form
     Then The form has been loaded correctly
 
     Examples: Launch in <browser>
-      | browser          |
-      | Chrome           |
-      | Safari           |
-      | Edge             |
-      | Firefox          |
-      | InternetExplorer |
-      | Opera            |
+      | browser |
+      | Chrome  |
+      | Safari  |
+      | Edge    |
+      | Firefox |
+      | ie      |
+      | Opera   |
 
 
   Scenario Outline: Launch the liferay form application with different resolutions

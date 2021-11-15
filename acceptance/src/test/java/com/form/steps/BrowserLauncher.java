@@ -34,6 +34,11 @@ public class BrowserLauncher {
     }
 
     public static WebDriver setBrowser(String browser) {
+
+        if (browser == "firefox") {
+            browser = "gecko";
+        }
+
         WebDriver driver = null;
         String driver_path = String.format("./src/test/resources/drivers/%sDriver.exe", browser);
         String property = String.format("webdriver.%s.driver", browser);
@@ -43,7 +48,7 @@ public class BrowserLauncher {
             case "chrome":
                 driver = new ChromeDriver();
                 break;
-            case "firefox":
+            case "gecko":
                 driver = new FirefoxDriver();
                 break;
             case "edge":
